@@ -33,6 +33,25 @@ nav a:hover {
     text-decoration: underline;
 }
 
+/* Mobile Menu Styles */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 4px;
+    margin: 5px 0;
+    background-color: white;
+}
+
+/* When menu is active, display the links */
+.nav-list.active {
+    display: block;
+}
+
 /* Service Section Styles */
 #services {
     padding: 20px;
@@ -80,24 +99,10 @@ nav a:hover {
     .service {
         width: 45%; /* Two items per row */
     }
-}
 
-/* For larger screens (desktops) */
-@media (min-width: 1024px) {
-    .service {
-        width: 22%; /* Four items per row */
-    }
-}
-
-/* Mobile Menu Styles */
-.menu-toggle {
-    display: none;
-}
-
-@media (max-width: 768px) {
+    /* Display the hamburger menu on small screens */
     .menu-toggle {
         display: block;
-        cursor: pointer;
     }
 
     .nav-list {
@@ -105,12 +110,16 @@ nav a:hover {
         width: 100%;
         text-align: center;
     }
+}
 
-    .nav-list.active {
-        display: block;
+/* For larger screens (desktops) */
+@media (min-width: 1024px) {
+    .service {
+        width: 22%; /* Four items per row */
     }
 
-    .nav-list li {
-        margin: 10px 0;
+    /* Menu is always visible */
+    .nav-list {
+        display: flex;
     }
 }

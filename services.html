@@ -67,5 +67,13 @@
         </nav>
         <p>&copy; 2025 Stellar Studios. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for the Mobile Menu (if you need it) -->
+    <script>
+        document.getElementById('mobile-menu').addEventListener('click', function() {
+            const navList = document.querySelector('.nav-list');
+            navList.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

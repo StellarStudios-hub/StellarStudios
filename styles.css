@@ -21,6 +21,7 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    transition: transform 0.3s ease-in-out; /* Animation for the menu */
 }
 
 nav ul li {
@@ -31,10 +32,12 @@ nav a {
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    transition: color 0.3s ease; /* Animation for link color */
 }
 
 nav a:hover {
     text-decoration: underline;
+    color: #f0f0f0; /* Hover color */
 }
 
 /* Mobile Menu Button */
@@ -93,4 +96,22 @@ footer p {
 
     nav ul {
         display: none;
-        flex-direction: column
+        flex-direction: column;
+        background-color: #111;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 100%;
+        transform: translateX(100%); /* Initially off-screen */
+    }
+
+    nav ul.active {
+        display: flex;
+        transform: translateX(0); /* Slide in */
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+    }
+}
